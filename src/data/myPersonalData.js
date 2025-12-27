@@ -49,7 +49,6 @@ const services = [
 
 const technologies = [
   { name: "JavaScript", icon: javascript },
-  { name: "TypeScript", icon: typescript },
   { name: "React JS", icon: reactjs },
 
 
@@ -204,9 +203,11 @@ export const projects = [
       "Contributed to the development and long-term maintenance of a professional video platform designed for enterprise use. The solution includes multiple modules such as advanced analytics, public and private APIs, video editing tools, TV portals, live broadcasting, and pay-per-view services. The platform supports a wide range of business use cases including marketing campaigns, internal HR communication, corporate messaging, and employee training. Focused on building scalable backend services, ensuring high availability for live streaming, and delivering a seamless user experience across web and TV platforms.",
     tags: [
       { name: "video-streaming", color: "red-text-gradient" },
+         { name: "gonlang", color: "red-text-gradient" },
       { name: "api", color: "blue-text-gradient" },
       { name: "analytics", color: "green-text-gradient" },
       { name: "live-broadcast", color: "pink-text-gradient" },
+      { name: "webinar", color: "pink-text-gradient" },
     ],
     image: github,
     company: "Sastech Group",

@@ -23,7 +23,7 @@ const Robot = ({ isMobile }) => {
         object={computer.scene}
         scale={isMobile ? 4 : 4}
         position={isMobile ? [0, -3, -2.2] : [0, -3.5, 0]}
-        rotation={[0, 0, 0]}
+        rotation={[0, -12, 0]}
       />
     </mesh>
   );

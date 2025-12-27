@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 
@@ -15,7 +15,16 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
+  company,
 }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const characterLimit = 150;
+  const isLongText = description.length > characterLimit;
+
+  const displayText = isExpanded || !isLongText 
+    ? description 
+    : `${description.substring(0, characterLimit)}...`;
+
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
@@ -49,7 +58,20 @@ const ProjectCard = ({
 
         <div className='mt-5'>
           <h3 className='text-white font-bold text-[24px]'>{name}</h3>
-          <p className='mt-2 text-secondary text-[14px]'>{description}</p>
+          <p className='mt-1 text-[16px] font-semibold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent italic'>
+            {company}
+          </p>
+          <p className='mt-2 text-secondary text-[14px]'>
+            {displayText}
+            {isLongText && (
+              <button
+                onClick={() => setIsExpanded(!isExpanded)}
+                className='ml-2 text-purple-400 hover:text-purple-300 font-semibold transition-colors duration-200'
+              >
+                {isExpanded ? 'Read less' : 'Read more'}
+              </button>
+            )}
+          </p>
         </div>
 
         <div className='mt-4 flex flex-wrap gap-2'>
