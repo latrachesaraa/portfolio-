@@ -4,7 +4,6 @@ import {
   instructor,
   fullstack,
   javascript,
-  typescript,
   reactjs,
   nodejs,
   mongodb,
@@ -73,6 +72,7 @@ const technologies = [
 
 const experiences = [
 {
+  id: "exis",
   title: "Full Stack Developer",
   company_name: "Exis Engineering Solutions Srl",
   icon: ExisES,
@@ -89,6 +89,7 @@ const experiences = [
   ],
 },
 {
+  id: "cookiejar",
   title: "Full Stack Developer | Project Manager",
   company_name: "Cookie Jar Tech",
   icon: cjt,
@@ -106,6 +107,7 @@ const experiences = [
 
 
   {
+    id: "sastecskills",
     title: "JavaScript Instructor (Part-time)",
     company_name: "SastecSkills",
     icon: sastecskills,
@@ -119,6 +121,7 @@ const experiences = [
   },
 
   {
+    id: "sastec",
     title: "Backend Developer (Golang)",
     company_name: "SASTEC Group",
     icon: sastec,
@@ -155,6 +158,7 @@ const testimonials = [
 
 export const projects = [
   {
+  id: "school-management",
   name: "School Management System",
   description:
     "Designed and developed a comprehensive web and mobile-based school management platform that covers the entire academic workflow. The system manages academic years and trimesters, student enrollment, teachers, parents, subjects, and class assignments. Advanced features include timetable generation and management, subject-to-teacher assignment, attendance tracking, grades and exam management, and payment and fee handling. A dedicated mobile application for parents allows real-time access to their children’s attendance, grades, timetables, exam schedules, and academic progress. The platform is built with a strong focus on role-based access control, data accuracy, scalability, and usability for administrators, teachers, students, and parents.",
@@ -169,6 +173,7 @@ export const projects = [
   company: "Personal",
 },
   {
+    id: "products-management",
     name: "Products Management System",
     description:
       "Designed and developed a complete product and inventory management system tailored for warehouse and retail businesses. The platform handles end-to-end product lifecycle management, automated order processing, multi-warehouse stock and quantity tracking, and advanced reporting. Implemented PDF generation for invoices and reports, along with multi-channel product export and synchronization with external e-commerce platforms such as WooCommerce, PrestaShop, and Shopify using multiple data formats (XML, JSON, etc.). Focused on scalability, performance optimization, and seamless integration with third-party services.",
@@ -184,6 +189,7 @@ export const projects = [
   },
 
   {
+    id: "traffic-dashboard",
     name: "Traffic Dashboard Monitoring",
     description:
       "Developed and maintained an advanced traffic analytics and monitoring dashboard aimed at traffic planning, simulation, and optimization (Pianificazione e simulazione di reti di traffico). Built data analytics pipelines to process and analyze traffic flow data, presenting insights through interactive maps, dynamic charts, and near real-time visualizations. Implemented complex geospatial and 3D visualizations using Deck.gl, Leaflet, and .PLY 3D models to accurately represent traffic networks and simulation outputs. Collaborated closely with traffic engineers and domain experts to translate complex modeling requirements into scalable and maintainable software solutions. Also managed deployment, environment configuration, and performance tuning to ensure high reliability and responsiveness.",
@@ -198,6 +204,7 @@ export const projects = [
   },
 
   {
+    id: "video-solution",
     name: "Professional Video Solution for Businesses",
     description:
       "Contributed to the development and long-term maintenance of a professional video platform designed for enterprise use. The solution includes multiple modules such as advanced analytics, public and private APIs, video editing tools, TV portals, live broadcasting, and pay-per-view services. The platform supports a wide range of business use cases including marketing campaigns, internal HR communication, corporate messaging, and employee training. Focused on building scalable backend services, ensuring high availability for live streaming, and delivering a seamless user experience across web and TV platforms.",

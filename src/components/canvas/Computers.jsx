@@ -2,10 +2,44 @@ import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
-import CanvasLoader from "../Loader";
+import { CanvasLoader } from "../Loader";
 
 const Computers = ({ isMobile }) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
+
+  // Validate the loaded model and fix any geometry issues
+  useEffect(() => {
+    if (computer.scene) {
+      computer.scene.traverse((child) => {
+        if (child.isMesh && child.geometry) {
+          try {
+            // Check for NaN values in geometry attributes
+            const positions = child.geometry.attributes.position;
+            if (positions) {
+              const array = positions.array;
+              let hasNaN = false;
+              for (let i = 0; i < array.length; i++) {
+                if (isNaN(array[i]) || !isFinite(array[i])) {
+                  array[i] = 0;
+                  hasNaN = true;
+                }
+              }
+              if (hasNaN) {
+                positions.needsUpdate = true;
+                // Recompute bounding sphere after fixing NaN values
+                child.geometry.computeBoundingSphere();
+                console.warn('Fixed NaN values in computer model geometry');
+              }
+            }
+          } catch (error) {
+            console.error('Error validating computer geometry:', error);
+            // Disable the mesh if geometry is corrupted
+            child.visible = false;
+          }
+        }
+      });
+    }
+  }, [computer.scene]);
 
   return (
     <mesh>

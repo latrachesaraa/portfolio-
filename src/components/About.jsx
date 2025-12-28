@@ -2,6 +2,7 @@ import React from "react";
 import { Tilt } from "react-tilt";
 
 import { motion } from "framer-motion";
+import { useTranslation } from 'react-i18next';
 
 import { design } from "../design";
 import { services } from "../data/myPersonalData";
@@ -38,11 +39,13 @@ const ServiceCard = ({ index, title, icon }) => (
 );
 
 const About = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={design.sectionSubText}>Introduction</p>
-        <h2 className={design.sectionHeadText}>Overview.</h2>
+        <p className={design.sectionSubText}>{t('about.introduction')}</p>
+        <h2 className={design.sectionHeadText}>{t('about.overview')}</h2>
       </motion.div>
 
       {/* Flex container for text and 3D model */}
@@ -52,22 +55,7 @@ const About = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px] flex-1'
         >
-          I am a Full Stack Developer with over 3 years of experience building
-          high-performance, scalable web applications. I specialize in JavaScript
-          and Golang, with strong expertise in both front-end and back-end
-          development using technologies such as React, Node.js, Express, and
-          modern Go frameworks.
-          <br /><br />
-          I have a proven track record of delivering efficient solutions that
-          improve performance and user engagement, including reducing load times,
-          optimizing backend architectures, and developing robust REST and
-          GraphQL APIs. I'm experienced in managing projects from concept to
-          production, collaborating with teams and clients to translate business
-          needs into reliable, user-friendly applications.
-          <br /><br />
-          Passionate about clean architecture, performance optimization, and
-          continuous learning, I also enjoy sharing knowledge through mentoring
-          and JavaScript training.
+          {t('about.description')}
         </motion.p>
 
         {/* 3D Computer Model - right side on desktop, below text on mobile */}

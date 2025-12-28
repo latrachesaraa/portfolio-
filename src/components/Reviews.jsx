@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from 'react-i18next';
 
 import { design } from "../design";
 import { SectionWrapper } from "../hoc";
@@ -15,6 +16,7 @@ const FeedbackCard = ({
   image,
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const { t } = useTranslation();
   const characterLimit = 300;
   const isLongText = testimonial.length > characterLimit;
   
@@ -39,7 +41,7 @@ const FeedbackCard = ({
             onClick={() => setIsExpanded(!isExpanded)}
             className='mt-2 text-blue-500 hover:text-blue-400 text-[14px] font-medium transition-colors'
           >
-            {isExpanded ? "Show less" : "Read more"}
+            {isExpanded ? t('testimonials.showLess') : t('testimonials.readMore')}
           </button>
         )}
 
@@ -65,14 +67,16 @@ const FeedbackCard = ({
 };
 
 const Reviews = () => {
+  const { t } = useTranslation();
+
   return (
     <div className={`mt-12 bg-black-100 rounded-[20px]`}>
       <div
         className={`bg-tertiary rounded-2xl ${design.padding} min-h-[300px]`}
       >
         <motion.div variants={textVariant()}>
-          <p className={design.sectionSubText}>What others say</p>
-          <h2 className={design.sectionHeadText}>Testimonials.</h2>
+          <p className={design.sectionSubText}>{t('testimonials.subtitle')}</p>
+          <h2 className={design.sectionHeadText}>{t('testimonials.title')}</h2>
         </motion.div>
       </div>
       <div className={`-mt-20 pb-14 ${design.paddingX} flex flex-wrap gap-7`}>

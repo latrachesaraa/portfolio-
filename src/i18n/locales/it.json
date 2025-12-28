@@ -1,0 +1,125 @@
+{
+  "nav": {
+    "about": "Chi Sono",
+    "work": "Lavoro",
+    "contact": "Contatto"
+  },
+  "intro": {
+    "greeting": "Ciao, sono",
+    "name": "Sara Latarche",
+    "subtitle": "Sono uno Sviluppatore Full Stack",
+    "description": "appassionata nel creare esperienze digitali pulite, efficienti e di impatto"
+  },
+  "about": {
+    "introduction": "Introduzione",
+    "overview": "Panoramica.",
+    "description": "Sono uno Sviluppatore Full Stack con oltre 3 anni di esperienza nella costruzione di applicazioni web ad alte prestazioni e scalabili. Mi specializzo in JavaScript e Golang, con una forte competenza sia nello sviluppo front-end che back-end utilizzando tecnologie come React, Node.js, Express e framework Go moderni.\n\nHo un comprovato track record nel fornire soluzioni efficienti che migliorano le prestazioni e il coinvolgimento degli utenti, inclusa la riduzione dei tempi di caricamento, l'ottimizzazione delle architetture backend e lo sviluppo di API REST e GraphQL robuste. Ho esperienza nella gestione di progetti dal concetto alla produzione, collaborando con team e clienti per tradurre le esigenze aziendali in applicazioni affidabili e user-friendly.\n\nAppassionata di architettura pulita, ottimizzazione delle prestazioni e apprendimento continuo, mi piace anche condividere conoscenze attraverso il mentoring e la formazione JavaScript."
+  },
+  "experience": {
+    "title": "Esperienza Lavorativa.",
+    "subtitle": "Cosa ho fatto finora",
+    "exis": {
+      "title": "Sviluppatore Full Stack",
+      "company_name": "Exis Engineering Solutions Srl",
+      "date": "Marzo 2025 - Presente",
+      "points": [
+        "Sviluppato e mantenuto un dashboard di analisi del traffico per la pianificazione, simulazione e ottimizzazione del traffico (Pianificazione e simulazione di reti di traffico).",
+        "Implementato pipeline di analisi dati per l'analisi del flusso di traffico utilizzando mappe interattive, grafici e visualizzazioni in tempo reale.",
+        "Costruito visualizzazioni geospaziali e 3D avanzate sfruttando Deck.gl, Leaflet e modelli 3D .PLY per rappresentare reti di traffico e risultati di simulazione.",
+        "Progettato e migliorato componenti di visualizzazione dati per evidenziare indicatori chiave del traffico e intuizioni di supporto decisionale.",
+        "Sviluppato servizi backend utilizzando Python e Flask per elaborare, analizzare ed esporre dati di traffico tramite API REST.",
+        "Collaborato strettamente con team di ingegneria per tradurre requisiti di modellazione del traffico in soluzioni software scalabili.",
+        "Gestito il deployment delle applicazioni e la configurazione dell'ambiente, garantendo prestazioni, affidabilità e manutenibilità dei sistemi di produzione."
+      ]
+    },
+    "cookiejar": {
+      "title": "Sviluppatore Full Stack | Project Manager",
+      "company_name": "Cookie Jar Tech",
+      "date": "Settembre 2022 - Ottobre 2024",
+      "points": [
+        "Sviluppato e contribuito a sistemi e-commerce multi-piattaforma su larga scala che supportano negozi online ad alto traffico.",
+        "Mantenuto, rifattorizzato e migliorato progetti legacy applicando principi di codice pulito, pattern di design e best practice del settore.",
+        "Ridotto significativamente il numero di bug di produzione identificando cause profonde e fornendo correzioni entro scadenze strette e rispettose, guadagnandomi il soprannome interno \"Sara la Cacciatrice di Bug\" dal CTO.",
+        "Progettato e sviluppato una piattaforma di gestione delle Risorse Umane (HR) inclusi workflow di gestione ferie e tracciamento assenze dei dipendenti.",
+        "Collaborato strettamente con proprietari di prodotto, CTO e team cross-funzionali per migliorare l'affidabilità, scalabilità e manutenibilità a lungo termine del sistema.",
+        "Migliorato le prestazioni e la stabilità complessive dell'applicazione, accelerando la consegna delle funzionalità e riducendo l'overhead di manutenzione."
+      ]
+    },
+    "sastecskills": {
+      "title": "Istruttore JavaScript (Part-time)",
+      "company_name": "SastecSkills",
+      "date": "Giugno 2022 - Ottobre 2022",
+      "points": [
+        "Consegnato bootcamp JavaScript e MERN Stack.",
+        "Supervisionato studenti su progetti frontend e backend.",
+        "Condotto workshop su gestione delle attività e risoluzione problemi in ambienti professionali."
+      ]
+    },
+    "sastec": {
+      "title": "Sviluppatore Backend (Golang)",
+      "company_name": "SASTEC Group",
+      "date": "Ottobre 2021 - Settembre 2022",
+      "points": [
+        "Sviluppato API REST e GraphQL utilizzando Golang.",
+        "Mantenuto e migliorato sistemi backend esistenti.",
+        "Integrato servizi SaaS, elaborazione video e piattaforme webinar live.",
+        "Lavorato all'interno della metodologia SCRUM in un team collaborativo."
+      ]
+    }
+  },
+  "projects": {
+    "title": "Progetti.",
+    "subtitle": "Il mio lavoro",
+    "description": "I seguenti progetti evidenziano la mia esperienza professionale come Sviluppatore Full Stack e Backend, lavorando su applicazioni reali in produzione. Dimostrano la mia capacità di progettare architetture scalabili, costruire API REST e GraphQL, ottimizzare le prestazioni e collaborare all'interno di team Agile, mostrando allo stesso tempo esperienza pratica con framework JavaScript moderni, servizi Golang, database e soluzioni cloud. I progetti personali includono dettagli tecnici completi, funzionalità e codice sorgente quando disponibile. Per i progetti aziendali, fornisco descrizioni chiare della funzionalità, del mio ruolo e dei contributi. A causa di accordi di riservatezza, il codice sorgente e le demo live per i progetti aziendali non sono condivisi.",
+    "readMore": "Leggi di più",
+    "readLess": "Mostra meno",
+    "school-management": {
+      "name": "Sistema di Gestione Scolastica",
+      "company": "Personale",
+      "description": "Progettato e sviluppato una piattaforma completa di gestione scolastica basata su web e mobile che copre l'intero flusso di lavoro accademico. Il sistema gestisce anni accademici e trimestri, iscrizione degli studenti, insegnanti, genitori, materie e assegnazioni di classe. Funzionalità avanzate includono generazione e gestione degli orari, assegnazione materia-insegnante, tracciamento delle presenze, gestione voti ed esami, e gestione pagamenti e tasse. Un'applicazione mobile dedicata per i genitori permette l'accesso in tempo reale alle presenze, voti, orari, programmi d'esame e progresso accademico dei loro figli. La piattaforma è costruita con un forte focus sul controllo degli accessi basato sui ruoli, accuratezza dei dati, scalabilità e usabilità per amministratori, insegnanti, studenti e genitori."
+    },
+    "products-management": {
+      "name": "Sistema di Gestione Prodotti",
+      "company": "Cookie Jar Tech",
+      "description": "Progettato e sviluppato un sistema completo di gestione prodotti e inventario su misura per aziende di magazzino e vendita al dettaglio. La piattaforma gestisce la gestione del ciclo di vita completo dei prodotti, elaborazione automatica degli ordini, tracciamento scorte e quantità multi-magazzino, e reporting avanzato. Implementata generazione PDF per fatture e report, insieme all'esportazione prodotti multi-canale e sincronizzazione con piattaforme e-commerce esterne come WooCommerce, PrestaShop e Shopify utilizzando molteplici formati dati (XML, JSON, ecc.). Focalizzato sulla scalabilità, ottimizzazione delle prestazioni e integrazione perfetta con servizi di terze parti."
+    },
+    "traffic-dashboard": {
+      "name": "Dashboard di Monitoraggio Traffico",
+      "company": "Exis Engineering Solutions Srl",
+      "description": "Sviluppato e mantenuto una dashboard avanzata di analisi e monitoraggio del traffico finalizzata alla pianificazione, simulazione e ottimizzazione del traffico (Pianificazione e simulazione di reti di traffico). Costruite pipeline di analisi dati per elaborare e analizzare i dati del flusso di traffico, presentando intuizioni attraverso mappe interattive, grafici dinamici e visualizzazioni quasi in tempo reale. Implementate visualizzazioni geospaziali e 3D complesse utilizzando Deck.gl, Leaflet e modelli 3D .PLY per rappresentare accuratamente reti di traffico e output di simulazione. Collaborato strettamente con ingegneri del traffico ed esperti del settore per tradurre requisiti di modellazione complessi in soluzioni software scalabili e manutenibili. Inoltre gestito deployment, configurazione dell'ambiente e ottimizzazione delle prestazioni per garantire alta affidabilità e reattività."
+    },
+    "video-solution": {
+      "name": "Soluzione Video Professionale per Aziende",
+      "company": "Sastech Group",
+      "description": "Contribuito allo sviluppo e alla manutenzione a lungo termine di una piattaforma video professionale progettata per uso aziendale. La soluzione include molteplici moduli come analytics avanzate, API pubbliche e private, strumenti di editing video, portali TV, trasmissione in diretta e servizi pay-per-view. La piattaforma supporta una vasta gamma di casi d'uso aziendali inclusi campagne di marketing, comunicazione HR interna, messaggistica aziendale e formazione dei dipendenti. Focalizzato sulla costruzione di servizi backend scalabili, garantendo alta disponibilità per lo streaming live e fornendo un'esperienza utente perfetta attraverso piattaforme web e TV."
+    }
+  },
+  "testimonials": {
+    "title": "Testimonianze.",
+    "subtitle": "Cosa dicono gli altri",
+    "readMore": "Leggi di più",
+    "showLess": "Mostra meno"
+  },
+  "contact": {
+    "title": "Contatto.",
+    "subtitle": "Mettiti in contatto",
+    "nameLabel": "Il tuo Nome",
+    "emailLabel": "La tua email",
+    "messageLabel": "Il tuo Messaggio",
+    "namePlaceholder": "Qual è il tuo buon nome?",
+    "emailPlaceholder": "Qual è il tuo indirizzo web?",
+    "messagePlaceholder": "Cosa vuoi dire?",
+    "send": "Invia",
+    "sending": "Invio...",
+    "successMessage": "Grazie. Ti risponderò il prima possibile.",
+    "errorMessage": "Ahh, qualcosa è andato storto. Riprova."
+  },
+  "loading": {
+    "loading": "Caricamento..."
+  },
+  "error": {
+    "title": "Ops! Qualcosa è andato storto",
+    "description": "Ci scusiamo per l'inconveniente. Prova ad aggiornare la pagina.",
+    "refresh": "Aggiorna Pagina"
+  }
+}

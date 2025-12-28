@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
+import { useTranslation } from 'react-i18next';
 
 import { design } from "../design";
 import { github } from "../assets";
@@ -16,14 +17,17 @@ const ProjectCard = ({
   image,
   source_code_link,
   company,
+  id,
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const { t } = useTranslation();
   const characterLimit = 150;
-  const isLongText = description.length > characterLimit;
+  const translatedDescription = t(`projects.${id}.description`);
+  const isLongText = translatedDescription.length > characterLimit;
 
   const displayText = isExpanded || !isLongText 
-    ? description 
-    : `${description.substring(0, characterLimit)}...`;
+    ? translatedDescription 
+    : `${translatedDescription.substring(0, characterLimit)}...`;
 
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
@@ -57,9 +61,9 @@ const ProjectCard = ({
         </div>
 
         <div className='mt-5'>
-          <h3 className='text-white font-bold text-[24px]'>{name}</h3>
+          <h3 className='text-white font-bold text-[24px]'>{t(`projects.${id}.name`)}</h3>
           <p className='mt-1 text-[16px] font-semibold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent italic'>
-            {company}
+            {t(`projects.${id}.company`)}
           </p>
           <p className='mt-2 text-secondary text-[14px]'>
             {displayText}
@@ -68,7 +72,7 @@ const ProjectCard = ({
                 onClick={() => setIsExpanded(!isExpanded)}
                 className='ml-2 text-purple-400 hover:text-purple-300 font-semibold transition-colors duration-200'
               >
-                {isExpanded ? 'Read less' : 'Read more'}
+                {isExpanded ? t('projects.readLess') : t('projects.readMore')}
               </button>
             )}
           </p>
@@ -90,11 +94,13 @@ const ProjectCard = ({
 };
 
 const Works = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${design.sectionSubText} `}>My work</p>
-        <h2 className={`${design.sectionHeadText}`}>Projects.</h2>
+        <p className={`${design.sectionSubText} `}>{t('projects.subtitle')}</p>
+        <h2 className={`${design.sectionHeadText}`}>{t('projects.title')}</h2>
       </motion.div>
 
       <div className='w-full flex'>
@@ -102,7 +108,7 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
         >
-The following projects highlight my professional experience as a Full Stack and Backend Developer, working on real-world applications in production. They demonstrate my ability to design scalable architectures, build REST and GraphQL APIs, optimize performance, and collaborate within Agile teams, while showcasing hands-on experience with modern JavaScript frameworks, Golang services, databases, and cloud solutions. Personal projects include full technical details, features, and source code when available. For company projects, I provide clear descriptions of functionality, my role, and contributions. Due to confidentiality agreements, source code and live demos for company projects are not shared.
+          {t('projects.description')}
         </motion.p>
       </div>
 

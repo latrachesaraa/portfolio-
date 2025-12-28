@@ -1,0 +1,16 @@
+{
+  "name": "Sara Latarche - Full Stack Developer Portfolio",
+  "short_name": "Sara Portfolio",
+  "description": "Portfolio of Sara Latarche, a skilled Full Stack Developer specializing in JavaScript, React, Node.js, and Golang.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050816",
+  "theme_color": "#915EFF",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    }
+  ]
+}
