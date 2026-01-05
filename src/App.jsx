@@ -5,7 +5,7 @@ import BackgroundMusic from "./components/BackgroundMusic";
 import ScrollToTop from "./components/ScrollToTop";
 import { LoadingScreen } from "./components/Loader";
 
-import { About, Contact, Experience, Feedbacks, Intro, Navbar, Tech, Works, StarsCanvas } from "./components";
+import { About, Contact, Experience, Feedbacks, Intro, Navbar, Tech, Works, StarsCanvas, MagicSprinkles } from "./components";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -55,6 +55,7 @@ const App = () => {
           </div>
           <BackgroundMusic />
           <ScrollToTop />
+          
         </div>
       </BrowserRouter>
     </ErrorBoundary>

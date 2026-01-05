@@ -2,40 +2,53 @@ import React, { useState, useRef, useEffect } from 'react';
 
 const BackgroundMusic = () => {
   const audioRef = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true); // Start as true for auto-play
   const [volume, setVolume] = useState(0.3);
 
   useEffect(() => {
     const audio = audioRef.current;
+    if (!audio) return;
+    
+    audio.volume = volume;
+    audio.loop = false; // Play once, don't loop
+    
+    // Aggressive auto-play attempt immediately on mount
+    const attemptAutoPlay = async () => {
+      try {
+        await audio.play();
+        setIsPlaying(true);
+        console.log('Music auto-playing');
+      } catch (error) {
+        console.log('Auto-play blocked by browser, waiting for user interaction');
+        setIsPlaying(false);
+        
+        // Auto-play on first ANY user interaction
+        const playOnInteraction = async () => {
+          try {
+            await audio.play();
+            setIsPlaying(true);
+            console.log('Music started after user interaction');
+          } catch (err) {
+            console.log('Failed to play audio:', err);
+          }
+        };
+        
+        // Listen for multiple interaction types
+        document.addEventListener('click', playOnInteraction, { once: true });
+        document.addEventListener('keydown', playOnInteraction, { once: true });
+        document.addEventListener('touchstart', playOnInteraction, { once: true });
+      }
+    };
+    
+    // Small delay to ensure DOM is ready, then auto-play
+    setTimeout(attemptAutoPlay, 100);
+  }, []);
+
+  // Separate effect for volume changes
+  useEffect(() => {
+    const audio = audioRef.current;
     if (audio) {
       audio.volume = volume;
-      audio.loop = true;
-      
-      // Try to auto-play when component mounts
-      const playAudio = async () => {
-        try {
-          await audio.play();
-          setIsPlaying(true);
-        } catch (error) {
-          // Auto-play failed due to browser policy, wait for user interaction
-          console.log('Auto-play blocked by browser, waiting for user interaction');
-          
-          // Add a one-time click listener to the document to enable auto-play
-          const enableAutoPlay = async () => {
-            try {
-              await audio.play();
-              setIsPlaying(true);
-              document.removeEventListener('click', enableAutoPlay);
-            } catch (err) {
-              console.log('Still unable to play audio');
-            }
-          };
-          
-          document.addEventListener('click', enableAutoPlay, { once: true });
-        }
-      };
-      
-      playAudio();
     }
   }, [volume]);
 

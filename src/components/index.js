@@ -11,6 +11,7 @@ import ErrorBoundary from './ErrorBoundary';
 import BackgroundMusic from './BackgroundMusic';
 import ScrollToTop from './ScrollToTop';
 import { CanvasLoader, LoadingScreen } from './Loader';
+import MagicSprinkles from './MagicSprinkles';
 
 export {
   Intro,
@@ -30,5 +31,6 @@ export {
   BackgroundMusic,
   ScrollToTop,
   CanvasLoader,
-  LoadingScreen
+  LoadingScreen,
+  MagicSprinkles
 }
