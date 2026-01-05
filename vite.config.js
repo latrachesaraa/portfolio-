@@ -7,4 +7,5 @@ export default defineConfig({
   server: {
     allowedHosts: ['b758901d2186.ngrok-free.app'],
   },
+    base: '/portfolio-/',
 })
